@@ -1,19 +1,23 @@
 describe 'the story' do
     story = File.readlines(File.join(File.dirname(__FILE__), '..', 'story.txt'))
+
     subject {
         story
     }
+
+    let(:chapter_heading_regex) { /chapter (.+)/i }
+
     it 'has chapters of 3-5 sentences'
     it 'has chapter headings' do
         unless subject == []
-            chapter_headings = subject.grep(/chapter (.+)/i)
+            chapter_headings = subject.grep(chapter_heading_regex)
             expect(chapter_headings).not_to be_empty
         end
     end
 
     it 'has increasing chapter numbers' do
         unless subject == []
-            chapter_numbers = subject.map {|l| l.match(/chapter (.+)/i) }.
+            chapter_numbers = subject.map {|l| l.match(chapter_heading_regex) }.
                                 compact.
                                 map {|md| md[1] }.map(&:to_i)
         
