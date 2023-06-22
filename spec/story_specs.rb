@@ -1,7 +1,7 @@
 describe 'the story' do
-    @@story = File.readlines(File.join(File.dirname(__FILE__), '..', 'story.txt'))
+    story = File.readlines(File.join(File.dirname(__FILE__), '..', 'story.txt'))
     subject {
-        @@story
+        story
     }
     it 'has chapters of 3-5 sentences'
     it 'has chapter headings'
