@@ -4,7 +4,13 @@ describe 'the story' do
         story
     }
     it 'has chapters of 3-5 sentences'
-    it 'has chapter headings'
+    it 'has chapter headings' do
+        unless subject == []
+            chapter_headings = subject.grep(/chapter (.+)/i)
+            expect(chapter_headings).not_to be_empty
+        end
+    end
+
     it 'has increasing chapter numbers' do
         unless subject == []
             chapter_numbers = subject.map {|l| l.match(/chapter (.+)/i) }.
