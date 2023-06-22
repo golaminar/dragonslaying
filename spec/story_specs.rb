@@ -5,7 +5,7 @@ describe 'the story' do
         story
     }
 
-    let(:chapter_heading_regex) { /chapter (.+)/i }
+    let(:chapter_heading_regex) { /^\# chapter (\d)$/i }
 
     it 'has chapters of 3-5 sentences'
     it 'has chapter headings' do
