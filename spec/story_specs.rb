@@ -6,11 +6,10 @@ describe 'the story' do
     }
 
     let(:chapter_heading_regex) { Regexp.new('^# chapter (\d)$', Regexp::IGNORECASE) }
+    #splitting produces an empty string before the first chapter, which we remove with [1..-1]
+    let(:chapters) { subject.join.split(/^# chapter \d/i)[1..-1] }
 
     it 'has chapters of 3-5 sentences' do
-        chapters = subject.join
-                          .split(/^# chapter \d/i)[1..-1] #strip off the empty string at the start
-
         last_chapter = chapters.pop
         line_counts = chapters.map {|c| c.lines.count}
 
@@ -36,7 +35,14 @@ describe 'the story' do
         end
     end
 
-    it 'is written in the style of Kurt Vonnegut'
+    it 'is written in the style of Kurt Vonnegut' do
+        last_sentences = chapters.map do |c|
+            c.split("\n").last
+        end
+
+        expect(last_sentences).to all(match(/^so it goes.$/i))
+    end
+
     it 'is written in the style of e e cummings'
     it 'is written in the style of F. Scott Fitzgerald'
     it 'is written in the style of Herman Melville'
