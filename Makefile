@@ -13,25 +13,25 @@ vonnegut:
 	sed -i '38,45s/#//' spec/story_specs.rb
 
 unvonnegut:
-	sed -i '38,45s/^/#/' spec/story_specs.rb
+	sed -i '38,45s/^[^#]/#/' spec/story_specs.rb
 
 cummings:
 	sed -i '47,49s/#//' spec/story_specs.rb
 
 uncummings:
-	sed -i '47,49s/^/#/' spec/story_specs.rb
+	sed -i '47,49s/^[^#]/#/' spec/story_specs.rb
 
 gatsby:
 	sed -i '51,54s/#//' spec/story_specs.rb
 
 ungatsby:
-	sed -i '51,54s/^/#/' spec/story_specs.rb
+	sed -i '51,54s/^[^#]/#/' spec/story_specs.rb
 
 moby:
 	sed -i '56,60s/#//' spec/story_specs.rb
 
 unmoby:
-	sed -i '56,60s/^/#/' spec/story_specs.rb
+	sed -i '56,60s/^[^#]/#/' spec/story_specs.rb
 
 .PHONY: clean
 clean: unvonnegut uncummings ungatsby unmoby
