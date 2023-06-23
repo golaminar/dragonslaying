@@ -21,6 +21,12 @@ cummings:
 uncummings:
 	sed -i '47,49s/^/#/' spec/story_specs.rb
 
+gatsby:
+	sed -i '51,54s/#//' spec/story_specs.rb
+
+ungatsby:
+	sed -i '51,54s/^/#/' spec/story_specs.rb
+
 .PHONY: clean
-clean: unvonnegut uncummings
+clean: unvonnegut uncummings ungatsby
 	rm -r .bundle vendor
