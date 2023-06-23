@@ -7,7 +7,17 @@ describe 'the story' do
 
     let(:chapter_heading_regex) { /^\# chapter (\d)$/i }
 
-    it 'has chapters of 3-5 sentences'
+    it 'has chapters of 3-5 sentences' do
+        chapters = story.join
+                        .split(/^# chapter \d/i)[1..-1] #strip off the empty string at the start
+
+        last_chapter = chapters.pop
+        line_counts = chapters.map {|c| c.lines.count}
+        # last chapter doesn't have a blank line preceding the next chapter
+        expect(last_chapter.lines.count).to be_between(5, 7)
+        expect(line_counts).to all(be_between(6, 8))
+    end
+
     it 'has chapter headings' do
         unless subject == []
             chapter_headings = subject.grep(chapter_heading_regex)
