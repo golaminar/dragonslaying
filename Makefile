@@ -27,6 +27,12 @@ gatsby:
 ungatsby:
 	sed -i '51,54s/^/#/' spec/story_specs.rb
 
+moby:
+	sed -i '56,60s/#//' spec/story_specs.rb
+
+unmoby:
+	sed -i '56,60s/^/#/' spec/story_specs.rb
+
 .PHONY: clean
-clean: unvonnegut uncummings ungatsby
-	rm -r .bundle vendor
+clean: unvonnegut uncummings ungatsby unmoby
+	rm -rf .bundle vendor

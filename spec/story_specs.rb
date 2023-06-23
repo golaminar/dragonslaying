@@ -35,29 +35,29 @@ describe 'the story' do
         end
     end
 
-#      it 'is written in the style of Kurt Vonnegut' do
-#          third_sentences = chapters.map do |c|
-#              # it's at index 4 because we have newline, newline, 1, 2, 3
-#              c.split("\n")[4]
-#          end
-#
-#          expect(third_sentences).to all(match(/^so it goes.$/i))
-#      end
+###      it 'is written in the style of Kurt Vonnegut' do
+###          third_sentences = chapters.map do |c|
+###              # it's at index 4 because we have newline, newline, 1, 2, 3
+###              c.split("\n")[4]
+###          end
+###
+###          expect(third_sentences).to all(match(/^so it goes.$/i))
+###      end
 
-#     it 'is written in the style of e e cummings' do
-#         expect(story.join).not_to match(/[A-Z]/)
-#     end
+###     it 'is written in the style of e e cummings' do
+###         expect(story.join).not_to match(/[A-Z]/)
+###     end
 
-#     it 'is written in the style of F. Scott Fitzgerald' do
-#         expected_sentence = "so we beat on, boats against the current, borne back ceaselessly into the past."
-#         expect(story.last.downcase.tr("\n", "")).to eq(expected_sentence)
-#     end
+###     it 'is written in the style of F. Scott Fitzgerald' do
+###         expected_sentence = "so we beat on, boats against the current, borne back ceaselessly into the past."
+###         expect(story.last.downcase.tr("\n", "")).to eq(expected_sentence)
+###     end
 
-    it 'is written in the style of Herman Melville' do
-        expected_sentence = "call me ishmael."
-        #index 2 because we have newline, newline, first sentence
-        expect(chapters.first.split("\n")[2].downcase.tr("\n", "")).to eq(expected_sentence)
-    end
+##     it 'is written in the style of Herman Melville' do
+##         expected_sentence = "call me ishmael."
+##         #index 2 because we have newline, newline, first sentence
+##         expect(chapters.first.split("\n")[2].downcase.tr("\n", "")).to eq(expected_sentence)
+##     end
 
     it 'is colourful' do
         expect(chapters).to all(match(/(red|green|blue)/i))
