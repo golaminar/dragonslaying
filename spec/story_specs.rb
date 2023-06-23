@@ -43,7 +43,10 @@ describe 'the story' do
         expect(last_sentences).to all(match(/^so it goes.$/i))
     end
 
-    it 'is written in the style of e e cummings'
+    it 'is written in the style of e e cummings' do
+        expect(story.join).not_to match(/[A-Z]/)
+    end
+
     it 'is written in the style of F. Scott Fitzgerald'
     it 'is written in the style of Herman Melville'
     it 'is colourful'
