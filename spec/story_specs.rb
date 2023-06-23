@@ -5,7 +5,7 @@ describe 'the story' do
         story
     }
 
-    let(:chapter_heading_regex) { /^\# chapter (\d)$/i }
+    let(:chapter_heading_regex) { Regexp.new('^# chapter (\d)$', Regexp::IGNORECASE) }
 
     it 'has chapters of 3-5 sentences' do
         chapters = story.join
