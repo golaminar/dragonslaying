@@ -37,7 +37,7 @@ describe 'the story' do
 
     it 'is written in the style of Kurt Vonnegut' do
         third_sentences = chapters.map do |c|
-            # it's  at index 4 because we have newline, newline, 1, 2, 3
+            # it's at index 4 because we have newline, newline, 1, 2, 3
             c.split("\n")[4]
         end
 
