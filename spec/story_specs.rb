@@ -44,9 +44,9 @@ describe 'the story' do
 #          expect(third_sentences).to all(match(/^so it goes.$/i))
 #      end
 
-    it 'is written in the style of e e cummings' do
-        expect(story.join).not_to match(/[A-Z]/)
-    end
+#     it 'is written in the style of e e cummings' do
+#         expect(story.join).not_to match(/[A-Z]/)
+#     end
 
     it 'is written in the style of F. Scott Fitzgerald' do
         expected_sentence = "so we beat on, boats against the current, borne back ceaselessly into the past."

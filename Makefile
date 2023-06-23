@@ -15,6 +15,12 @@ vonnegut:
 unvonnegut:
 	sed -i '38,45s/^/#/' spec/story_specs.rb
 
+cummings:
+	sed -i '47,49s/#//' spec/story_specs.rb
+
+uncummings:
+	sed -i '47,49s/^/#/' spec/story_specs.rb
+
 .PHONY: clean
-clean: unvonnegut
+clean: unvonnegut uncummings
 	rm -r .bundle vendor
