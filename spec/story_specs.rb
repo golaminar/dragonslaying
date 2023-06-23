@@ -59,5 +59,7 @@ describe 'the story' do
         expect(chapters.first.split("\n")[2].downcase.tr("\n", "")).to eq(expected_sentence)
     end
 
-    it 'is colourful'
+    it 'is colourful' do
+        expect(chapters).to all(match(/(red|green|blue)/i))
+    end
 end
