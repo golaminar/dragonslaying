@@ -33,6 +33,12 @@ moby:
 unmoby:
 	sed -i '56,60s/^[^#]/#/' spec/story_specs.rb
 
+rgb:
+	sed -i '62,64s/#//' spec/story_specs.rb
+
+unrgb:
+	sed -i '62,64s/^[^#]/#/' spec/story_specs.rb
+
 .PHONY: clean
-clean: unvonnegut uncummings ungatsby unmoby
+clean: unvonnegut uncummings ungatsby unmoby unrgb
 	rm -rf .bundle vendor
