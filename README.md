@@ -16,3 +16,7 @@ Once all the above pre-requisites are installed, you should be able to run `make
 ## Other
 
 During the workshop, you will sometimes be asked to run other `make` commands. These commands will modify the file `spec/story_specs.rb`. _You should never edit this file manually_. When you have run these commands, please include the modified version of the file in your next commit.
+
+## Preparing for the workshop (Laminar use only)
+
+To reset this repository for a new workshop run, `git reset --hard` to the tag `beginning` and force push.
