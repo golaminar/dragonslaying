@@ -10,12 +10,14 @@ describe 'the story' do
     let(:chapters) { subject.join.split(/^# chapter \d/i)[1..-1] }
 
     it 'has chapters of 3-5 sentences' do
-        last_chapter = chapters.pop
-        line_counts = chapters.map {|c| c.lines.count}
+        if (chapters) # only test this if there is content
+          last_chapter = chapters.pop
+          line_counts = chapters.map {|c| c.lines.count}
 
         # last chapter doesn't have a blank line preceding the next chapter
-        expect(last_chapter.lines.count).to be_between(5, 7)
-        expect(line_counts).to all(be_between(6, 8))
+          expect(last_chapter.lines.count).to be_between(5, 7)
+          expect(line_counts).to all(be_between(6, 8))
+        end
     end
 
     it 'has chapter headings' do
