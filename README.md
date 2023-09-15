@@ -15,6 +15,8 @@ If you are on Linux or another platform using GNU sed, copy `Makefile.gnu` to `M
 
 If you are on Mac OS X, copy `Makefile.osx` to `Makefile`.
 
+If you are on Windows, we strongly recommend using WSL2 (this is Tom's environment of choice). A native Windows dev setup (e.g. with Cygwin) will probably work with the `Makefile.gnu` file, but WSL2 is tested to work. For WSL2 setup instructions, see https://learn.microsoft.com/en-us/windows/wsl/install.
+
 Once all the above pre-requisites are installed, you should be able to run `make` in the root of the repository and see 3 tests running and passing.
 
 ## Other
