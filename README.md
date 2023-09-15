@@ -11,6 +11,8 @@ In this repository you will find everything you need to participate in the Drago
 
 ## Setup and running the tests
 
+If you are on Linux or another platform using GNU sed, copy `Makefile.gnu` to `Makefile`.
+If you are on Mac OS X, copy `Makefile.osx` to `Makefile`.
 Once all the above pre-requisites are installed, you should be able to run `make` in the root of the repository and see 3 tests running and passing.
 
 ## Other

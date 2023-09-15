@@ -1,0 +1,44 @@
+.PHONY: test
+test: vendor/bundle
+	bundle exec rspec spec/story_specs.rb
+
+vendor/bundle: .bundle/config
+	bundle install
+
+.bundle/config:
+	bundle config set --local path 'vendor/bundle'
+
+# THESE ARE REALLY BRITTLE AND WILL BREAK IF LINE NUMBERS CHANGE IN THE SPEC FILE
+vonnegut:
+	sed -i '' '40,47s/#//' spec/story_specs.rb
+
+unvonnegut:
+	sed -i '' '40,47s/^[^#]/#/' spec/story_specs.rb
+
+cummings:
+	sed -i '' '49,51s/#//' spec/story_specs.rb
+
+uncummings:
+	sed -i '' '40,51s/^[^#]/#/' spec/story_specs.rb
+
+gatsby:
+	sed -i '' '53,56s/#//' spec/story_specs.rb
+
+ungatsby:
+	sed -i '' '53,56s/^[^#]/#/' spec/story_specs.rb
+
+moby:
+	sed -i '' '58,62s/#//' spec/story_specs.rb
+
+unmoby:
+	sed -i '' '58,62s/^[^#]/#/' spec/story_specs.rb
+
+rgb:
+	sed -i '' '64,66s/#//' spec/story_specs.rb
+
+unrgb:
+	sed -i '' '64,66s/^[^#]/#/' spec/story_specs.rb
+
+.PHONY: clean
+clean: unvonnegut uncummings ungatsby unmoby unrgb
+	rm -rf .bundle vendor
