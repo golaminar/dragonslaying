@@ -37,14 +37,14 @@ describe 'the story' do
         end
     end
 
-#      it 'is written in the style of Kurt Vonnegut' do
-#          third_sentences = chapters.map do |c|
-#              # it's at index 4 because we have newline, newline, 1, 2, 3
-#              c.split("\n")[4]
-#          end
-#
-#          expect(third_sentences).to all(match(/^so it goes.$/i))
-#      end
+      it 'is written in the style of Kurt Vonnegut' do
+          third_sentences = chapters.map do |c|
+              # it's at index 4 because we have newline, newline, 1, 2, 3
+              c.split("\n")[4]
+          end
+
+          expect(third_sentences).to all(match(/^so it goes.$/i))
+      end
 
 #     it 'is written in the style of e e cummings' do
 #         expect(story.join).not_to match(/[A-Z]/)
