@@ -3,3 +3,9 @@
 Call me Ishmael.
 Because that is my name.
 My name, as I said, is Ishmael.
+
+# Chapter 7
+
+“Adieu, Allie”, said Ishmael.
+“Ciaozers, Ishmael,” said Allie.
+And so they departed.
