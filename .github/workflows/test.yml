@@ -19,5 +19,8 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
     - name: Test
-      run: make
+
+      run: |
+        cp Makefile.gnu Makefile
+        make
       working-directory: .
