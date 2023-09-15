@@ -55,11 +55,11 @@ describe 'the story' do
 #         expect(story.last.downcase.tr("\n", "")).to eq(expected_sentence)
 #     end
 
-#    it 'is written in the style of Herman Melville' do
-#        expected_sentence = "call me ishmael."
-#        #index 2 because we have newline, newline, first sentence
-#        expect(chapters.first.split("\n")[2].downcase.tr("\n", "")).to eq(expected_sentence)
-#    end
+    it 'is written in the style of Herman Melville' do
+        expected_sentence = "call me ishmael."
+        #index 2 because we have newline, newline, first sentence
+        expect(chapters.first.split("\n")[2].downcase.tr("\n", "")).to eq(expected_sentence)
+    end
 
 #   it 'is colourful' do
 #       expect(chapters).to all(match(/(red|green|blue)/i))
