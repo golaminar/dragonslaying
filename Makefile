@@ -10,34 +10,34 @@ vendor/bundle: .bundle/config
 
 # THESE ARE REALLY BRITTLE AND WILL BREAK IF LINE NUMBERS CHANGE IN THE SPEC FILE
 vonnegut:
-	sed -i '38,45s/#//' spec/story_specs.rb
+	sed -ig '40,47s/#//' spec/story_specs.rb
 
 unvonnegut:
-	sed -i '38,45s/^[^#]/#/' spec/story_specs.rb
+	sed -ig '40,47s/^[^#]/#/' spec/story_specs.rb
 
 cummings:
-	sed -i '47,49s/#//' spec/story_specs.rb
+	sed -ig '49,51s/#//' spec/story_specs.rb
 
 uncummings:
-	sed -i '47,49s/^[^#]/#/' spec/story_specs.rb
+	sed -ig '40,51s/^[^#]/#/' spec/story_specs.rb
 
 gatsby:
-	sed -i '51,54s/#//' spec/story_specs.rb
+	sed -ig '53,56s/#//' spec/story_specs.rb
 
 ungatsby:
-	sed -i '51,54s/^[^#]/#/' spec/story_specs.rb
+	sed -ig '53,56s/^[^#]/#/' spec/story_specs.rb
 
 moby:
-	sed -i '56,60s/#//' spec/story_specs.rb
+	sed -ig '58,62s/#//' spec/story_specs.rb
 
 unmoby:
-	sed -i '56,60s/^[^#]/#/' spec/story_specs.rb
+	sed -ig '58,62s/^[^#]/#/' spec/story_specs.rb
 
 rgb:
-	sed -i '62,64s/#//' spec/story_specs.rb
+	sed -ig '64,66s/#//' spec/story_specs.rb
 
 unrgb:
-	sed -i '62,64s/^[^#]/#/' spec/story_specs.rb
+	sed -ig '64,66s/^[^#]/#/' spec/story_specs.rb
 
 .PHONY: clean
 clean: unvonnegut uncummings ungatsby unmoby unrgb
